@@ -9,12 +9,13 @@ def create_rag_pipeline(vector_store):
     '''
     Create and return a RAG pipeline.
     '''
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     hf_pipeline = pipeline(
         'text2text-generation',
         model='google/flan-t5-base',
-        device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
+        device=device,
         max_new_tokens=100,
-        )
+    )
     llm = HuggingFacePipeline(pipeline=hf_pipeline)
     prompt = PromptTemplate(
         template="Answer the question based on the context: {context}\nQuestion: {question}\nAnswer:",
@@ -36,7 +37,6 @@ def get_answer(qa_chain, vector_store, question):
     Get the answer to a question using the RAG pipeline.
     '''
     ranked_docs = rerank_documents(vector_store, question, top_k=2)
-    context = '\n'.join(doc.page_content for doc in ranked_docs[:1])
-    context = context[:2000]
+    context = '\n'.join(doc.page_content for doc in ranked_docs)
     result = qa_chain({'question': question, 'context': context})
     return result.get('answer', result.get('result', 'No answer found'))
