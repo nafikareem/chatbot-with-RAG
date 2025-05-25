@@ -1,0 +1,10 @@
+transformers
+langchain
+sentence-transformers
+faiss-cpu
+streamlit
+torch
+langchain-community
+dotenv
+pypdf
+beautifulsoup4

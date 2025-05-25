@@ -1,0 +1,3 @@
+This is a sample text for testing the LangChain pipeline.
+It contains multiple sentences and paragraphs to ensure proper text splitting and embedding.
+The goal is to create a vector store and perform retrieval-based question answering.
