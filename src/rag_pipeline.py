@@ -1,4 +1,4 @@
-from langchain_huggingface import HuggingFaceEmbeddings, HuggingFacePipeline
+from langchain_community.llms import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 from transformers import pipeline
 from langchain.chains import RetrievalQA
