@@ -5,7 +5,7 @@ This project is a **Knowledge-Based Chatbot** built using Retrieval-Augmented Ge
 
 ### RAG Pipeline
 
-![alt text](img/Pipeline.drawio.png)
+![alt text](image.png)
 
 
 ### Features
