@@ -1,7 +1,11 @@
 # Knowledge-Based Chatbot with RAG
 
 ## Overview
-This project is a **Knowledge-Based Chatbot** built using Retrieval-Augmented Generation (RAG) techniques. It allows users to upload PDF documents, input web URLs, or provide raw text as knowledge sources, and then ask questions based on the provided content. The chatbot leverages the `google/flan-t5-base` model for text generation and `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` for embedding documents into a vector store. The user interface is developed using Streamlit, with a streaming output effect to enhance user experience.
+This project is a **Knowledge-Based Chatbot** built using Retrieval-Augmented Generation (RAG) techniques. It allows users to upload PDF documents, input web URLs, or provide raw text as knowledge sources, and then ask questions based on the provided content. The chatbot leverages the `google/flan-t5-base` model for text generation and `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` for embedding documents into a vector store. The user interface is developed using Streamlit, with a streaming output effect to enhance user experience. 
+
+### Live Demo
+
+You can try the chatbot directly by visiting the live application: [**navAI 2.0**](https://navaiapp.streamlit.app/)
 
 ### RAG Pipeline
 
