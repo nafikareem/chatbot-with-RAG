@@ -14,6 +14,7 @@ if 'pipeline' not in st.session_state:
     st.session_state.pipeline = None
     
 st.title('navAI 2.0')
+st.subheader('A RAG-based AI Assistant for Document Analysis and Question Answering')
 
 # input section
 
